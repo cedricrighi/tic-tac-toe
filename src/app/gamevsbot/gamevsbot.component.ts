@@ -14,8 +14,6 @@ export class GamevsbotComponent {
     if (this.board[index] !== ' ') {
       return;
     }
-    console.log(this.board);
-    console.log(`case: ${index}`);
     this.board[index] = this.actualPlayer;
     this.actualPlayer = this.actualPlayer === 'X' ? 'O' : 'X';
   }

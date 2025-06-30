@@ -1,6 +1,58 @@
 <section class="landing-page-container">
-  <img src="/landing-page-img.svg" alt="" />
-  <p>Bienvenue sur MorpionMaster!</p>
-  <a routerLink="/vsbot">Jouer contre le bot</a>
-  <a>Jouer avec un ami en local</a>
+  <img
+    class="landing-page-img"
+    src="/landing-page-img.svg"
+    alt="exemple image"
+  />
+  <button class="choosing-gamemode-button" (click)="showSignChoosing('vsbot')">
+    Jouer contre le bot
+  </button>
+  <button class="choosing-gamemode-button" (click)="showSignChoosing('local')">
+    Jouer avec un ami en local
+  </button>
+  @if (isShowingSignChoosing) {
+  <article class="sign-choosing-container">
+    <div class="sign-choosing">
+      <div class="upper-part">
+        <h2>
+          {{
+            toGame === "vsbot"
+              ? "Choisissez votre signe"
+              : "Choisissez le signe du premier joueur"
+          }}
+        </h2>
+        <button
+          type="button"
+          (click)="closeSignChoosing()"
+          class="close-button"
+        >
+          <img class="close-button-img" src="/close.svg" alt="close button" />
+        </button>
+      </div>
+      <div class="sign-buttons-container">
+        <button
+          type="button"
+          (click)="selectX()"
+          [class.x-button]="true"
+          [class.sign-selected]="playerSign === 'X'"
+        >
+          X
+        </button>
+        <button
+          type="button"
+          (click)="selectO()"
+          [class.o-button]="true"
+          [class.sign-selected]="playerSign === 'O'"
+        >
+          O
+        </button>
+      </div>
+      <a
+        class="start-game"
+        [routerLink]="toGame === 'vsbot' ? '/vsbot' : '/local'"
+        >Démarrer la partie</a
+      >
+    </div>
+  </article>
+  }
 </section>
