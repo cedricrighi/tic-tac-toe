@@ -6,4 +6,10 @@
     </p>
     }
   </article>
+  @if (showWinner) {
+  <div class="winner-message">
+    <p class="message">{{ messageEnd }}</p>
+    <a class="go-home" [routerLink]="['/']">Retourner à l'accueil</a>
+  </div>
+  }
 </section>

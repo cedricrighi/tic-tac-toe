@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  isShowingSignChoosing = true;
+  isShowingSignChoosing = false;
   toGame: '' | 'vsbot' | 'local' = '';
   playerSign: 'X' | 'O' = 'X';
 

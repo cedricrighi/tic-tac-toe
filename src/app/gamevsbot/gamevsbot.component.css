@@ -8,6 +8,7 @@
 }
 
 .board {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 25vw);
   grid-template-rows: repeat(3, 25vw);
@@ -24,4 +25,27 @@
   font-size: 4.5rem;
   border: 3px solid rgb(255, 185, 176);
   border-radius: 1rem;
+}
+
+.winner-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 2rem;
+  color: rgb(255, 185, 176);
+  margin-top: 2rem;
+}
+
+.go-home {
+  width: fit-content;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
