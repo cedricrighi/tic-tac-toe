@@ -13,10 +13,6 @@ export class LocalgameComponent {
   showWinner = false;
   messageEnd = '';
 
-  constructor() {
-    console.log(this.actualPlayer);
-  }
-
   play(index: number) {
     if (this.board[index] !== ' ' || this.showWinner) {
       return;
