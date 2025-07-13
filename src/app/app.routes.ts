@@ -1,6 +1,7 @@
 import type { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { GamevsbotComponent } from './gamevsbot/gamevsbot.component';
+import { LocalgameComponent } from './localgame/localgame.component';
 
 export const routes: Routes = [
   {
@@ -10,5 +11,9 @@ export const routes: Routes = [
   {
     path: 'vsbot',
     component: GamevsbotComponent,
+  },
+  {
+    path: 'local',
+    component: LocalgameComponent,
   },
 ];

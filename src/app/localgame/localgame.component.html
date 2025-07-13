@@ -1,0 +1,15 @@
+<section class="game-container">
+  <article class="board">
+    @for (elem of board; let i = $index; track i) {
+    <p (click)="play(i)" class="cell">
+      {{ elem }}
+    </p>
+    }
+  </article>
+  @if (showWinner) {
+  <div class="winner-message">
+    <p class="message">{{ messageEnd }}</p>
+    <a class="go-home" [routerLink]="['/']">Retourner à l'accueil</a>
+  </div>
+  }
+</section>

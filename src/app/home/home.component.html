@@ -49,6 +49,7 @@
       </div>
       <a
         class="start-game"
+        [state]="{ sign: playerSign }"
         [routerLink]="toGame === 'vsbot' ? '/vsbot' : '/local'"
         >Démarrer la partie</a
       >
